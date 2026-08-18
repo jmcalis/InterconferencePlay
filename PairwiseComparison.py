@@ -30,7 +30,7 @@ def simulate(n,m,M,reps = 1, g=9, dist = 'uniform', method = 'random'):
     if (dist == 'uniform'):
         pi = np.random.rand(n+m)
     else:
-        pi = np.random.exponential(n+m)
+        pi = np.random.exponential(1,m+n)
     #Create a schedule with 9 conference games each and M non-conference games (drawn from some distribution)
     G1 = nx.random_regular_graph(g,n)
     G2 = nx.random_regular_graph(g,m)
