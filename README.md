@@ -1,2 +1,11 @@
 # InterconferencePlay
-A set of tools used for the analysis of ranking methods in the face of highly modular pairwise comparison data
+A set of tools used for the analysis of ranking methods in the face of highly modular pairwise comparison data. The landscape of college football has always been very modular because teams play frequently within their conferences and rarely outside of their conferences. This modularity poses a problem when it comes time to rank teams. The sparsity of interconference information means that analysts who publish rankings have little data to use when comparing teams in different conferences that have not played one another. Because this is a source of great friction for fans of college football, we seek to quantify the effect that modularity has on the college football landscape. Before we begin with our analysis we introduce out two models for ranking. The history independent Zermelo's algorithm and the history dependent Elo algorithm. Both have been commonly used to produce ranking from pairwise comparison data and, at first sight, they appeat to be very similar. However, there are crucial differences which mean that they behave differentl in a modular setting. 
+
+## Main Files
+`ModularityInCfb.ipynb` is the main file which carries out much of the analysis described in the abstract. It also offers an introduction into the methods used. If you want to get familiar with the code, work through this notebook and see how it works. The other two main files are `ELOmain.py` Which uses the CFB data from the past 10 years to compute ELO ratings for every team in FBS, and `EmpericalZer.ipynb` which uses the CFB data from the past 10 years to compute Zermelo Rankings for each season and carry our empirical hypothesis tests with the data.
+
+## Other Files
+`functions.py` is a set of functions used in the ELO model. `PairwiseComparison.py` is a set of functions used in the creation and analysis of synthetic data. `DataIn.py`  the code from with `EmpericalZer.ipynb` was built and  `Demo.ipynb`  is a (now redundant) notebook which describes how the code is used.
+
+## Data Files
+In addition to the code, there are Data files in the folder called `DataFiles`. The files labeled `X_game_results.csv` are the CFB data from the past 10 years which were used in this project. All other `.csv` files are the results of simulations with synthetic data from the `.ipynb` files. In many cases these simulations are time consuming so the data is saved and retrieved from `.csv`s instead of being regenerated each time. 
