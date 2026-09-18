@@ -22,8 +22,6 @@ def update_elo(elo_A, elo_B, k,K, outcome, h=0):
         raise ValueError("Invalid outcome. Must be a 1 (A wins) or 0 (B wins).")
     return elo_A_new, elo_B_new
 
-
-
 def clean_season(raw_dataframe, season):
     season_data = raw_dataframe.copy()
     season_data = season_data.rename({'Unnamed: 7': 'Location'}, axis = "columns")
